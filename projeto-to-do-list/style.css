@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans:wght@400&display=swap');
+
+
+body {
+    background-image: linear-gradient(90deg, #3198E2, #6D59C0, #B93590, #E33F5F, #FDD579);
+    color: #fff;
+}
+
+h1 {
+    text-align: center;
+    font-size: 100px;
+    font-family: 'Cal Sans', sans-serif;
+}
+
+
+#input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.txt-animado {
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Cal Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.txt-animado span {
+    position: relative;
+}
+
+.txt-animado span::before {
+    content: "";
+    color: #fff;
+    animation: words 25s infinite;
+}
+
+.txt-animado span::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    border-left: 2px solid #fff;
+    right: -10px;
+    animation: cursor 5s infinite, digita 25s steps(15) infinite;
+    width: calc(100% + 15px);
+    background-image: linear-gradient(90deg, #6D59C0, #B93590, #E33F5F);
+}
+
+@keyframes digita {
+    10%, 15%, 30%, 35%, 50%, 55%, 70%, 90%, 95% {
+        width: 0;
+    }
+    5%, 20%, 25%, 40%, 45%, 60%, 80%, 85% {
+        width: calc(100% + 15px);
+    }
+}
+
+@keyframes cursor {
+    0% {
+        border-left: 2px solid #fff;
+    }
+}
+
+@keyframes words {
+    0%, 20% {
+        content: "Qual tarefa você quer adicionar?";
+    }
+    21%, 40% {
+        content: "Deixe o seu dia organizado";
+    }
+    41%, 60% {
+        content: "Planeje seu dia";
+    }
+    61%, 80% {
+        content: "Qual bem você fará hoje?";
+    }
+    81%, 100% {
+        content: "Planeje bem o seu dia";
+    }
+}
+
+#btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#add {
+    color: #fff;
+    width: 8rem;
+    height: 2.5rem;
+    border-radius: 1rem;
+    background-color: #3198E2;
+    font-family: 'Cal Sans';
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#table {
+    width: 35rem;
+    height: auto;
+    border: #000 solid;
+    border-radius: 15px;
+    background-color: #fff;
+    text-align: left;
+    color: #000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.task input[type='text'] {
+    margin-left: 1rem;
+    padding: 0.3rem;
+    border: none;
+    outline: none;
+}
+
+.box {
+    width: 15px;
+    height: 15px;
+    border: 2px solid black;
+    cursor: pointer;
+    margin-right: 0.1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.box.active {
+    background-color: #00b7ff;
+}
+
+.delete-btn {
+    margin-left: auto;
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #ff4444;
+    transition: transform 0.2s;
+}
+
+.delete-btn:hover {
+    transform: scale(1.2);
+}
