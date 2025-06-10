@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+header {
+    background-color: #ff6100;
+    margin: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    background-color: #fff;
+    transition: .5s;
+}
+ 
+.trilho {
+    width: 115px;
+    height: 50px;
+    background-color: #4d4d4d;
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+    margin-left: 60rem;
+}
+
+.trilho .indicador {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    transform: scale(.8);
+    position: absolute;
+    left: 0;
+    transition: .5s;
+}
+
+.trilho.dark {
+    background-color: #c3c3c3;
+}
+
+.trilho.dark .indicador{
+    left: 65px;
+    background-color: #000;
+}
+
+body.dark {
+    background-color: #000;
+    color: #fff;
+}
+
+#sorted {
+    font-family: Josefin Sans;
+    font-weight: 700;
+    color: #fff;
+}
+
+main {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#primer {
+    font-weight: 1000;
+    font-size: 3rem;
+}
+
+input {
+    width: 5rem;
+    height: 3rem;
+    font-size: larger;
+    border-radius: 5px;
+}
+
+label {
+    font-size: 1.5rem;
+}
+
+#btnSelect, #btnExcluir {
+    width: 6rem;
+    height: 3.38rem;
+    background-color: #000;
+    color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+    border-radius: 5px;
+}
+
+.dinamic-input-name {
+    width: 15rem;
+    height: 2rem;
+}
+
+#btn-continue {
+    width: 16rem;
+    height: 2rem;
+    border-radius: 10px;
+    font-size: larger;
+    font-family: Josefin Sans;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
